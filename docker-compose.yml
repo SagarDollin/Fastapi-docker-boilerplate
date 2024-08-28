@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/src
+      - ./requirements.txt:/requirements.txt
+    command: ["fastapi", "run", "server.py", "--port", "80"]
