@@ -14,6 +14,8 @@ from app import app
 
 from jose import JWTError, jwt
 
+config = dotenv_values(".env")
+
  
 
 SECRET_KEY = config["SECRET_KEY"]
